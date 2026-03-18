@@ -1,0 +1,314 @@
+/* =========================================
+   MASTER CSS FRAMEWORK — FULL VERSION
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+    /* COLORS */
+    --primary-color: #2563eb;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+
+    /* SPACING */
+    --space-10: 10px;
+    --space-20: 20px;
+    --space-30: 30px;
+
+    /* FONT */
+    --font-family: 'Poppins', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    /* BORDER RADIUS */
+    --radius-small: 8px;
+    --radius-large: 20px;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    /* max-width: 1300px;
+    margin: auto; */
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    background-color: var(--white-color);
+    gap: 50px;
+    padding: 0px 10px;
+    margin-bottom: 50px;
+    max-width: 1300px;
+    margin: auto;
+
+    img {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: var(--space-10);
+        border-radius: 30px;
+        padding: 10px 20px;
+        width: 400px;
+        background-color: var(--gray-100);
+    }
+
+    .search input {
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: var(--gray-100);
+    }
+
+    .search i {
+        font-size: 25px;
+    }
+
+    .lociton {
+        display: flex;
+        gap: var(--space-10);
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        /* box-shadow: 0px 0px 3px 0px var(--gray-900); */
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: var(--gray-100);
+        cursor: pointer;
+    }
+
+    .lociton i {
+        font-size: 25px;
+    }
+
+    .header-btn {
+        display: flex;
+        gap: var(--space-10);
+        justify-content: space-between;
+        align-items: center;
+        /* box-shadow: 0px 0px 3px 0px var(--gray-900); */
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: var(--gray-100);
+        border: none;
+        /* margin-left: 150px; */
+        cursor: pointer;
+    }
+
+    .header-btn i {
+        font-size: 25px;
+        margin-left: 150px;
+
+    }
+
+    .header-btn:focus {
+        background-color: #000;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .header-login {
+        display: flex;
+        gap: var(--space-10);
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    .header-login i {
+        font-size: 25px;
+    }
+}
+
+/* ================= HOME ================= */
+.home {
+    margin-top: 100px;
+}
+
+.home-img {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    cursor: pointer;
+}
+
+.home-img::-webkit-scrollbar {
+    display: none;
+}
+
+.home-img img {
+    flex-shrink: 0;
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-large);
+}
+
+/* ================= FOOD MENU ================= */
+.food-menu {
+    margin-top: 50px;
+}
+
+.urab-turuvchi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: var(--radius-large);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.lilar {
+    padding: 5px 20px;
+    border-radius: var(--radius-small);
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.lilar.active {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.strong {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: var(--radius-small);
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.strong:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+/* ================= MAGAZIN / CARDS ================= */
+.magazin {
+    margin-top: 50px;
+}
+
+.cardlar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.card {
+    flex: 1 1 calc(25% - 10px);
+    /* 4 cards per row */
+    max-width: calc(25% - 10px);
+    background-color: var(--white-color);
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+    /* padding: 20px; */
+    /* text-align: center; */
+    line-height: 40px;
+
+}
+
+.info{
+    margin-left: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.buttonlar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* justify-content: center; */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.333% - 10px);
+        /* 3 cards per row */
+        max-width: calc(33.333% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 10px);
+        /* 2 cards per row */
+        max-width: calc(50% - 10px);
+    }
+
+    .search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        /* 1 card per row */
+        max-width: 100%;
+    }
+}
